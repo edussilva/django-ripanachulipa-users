@@ -4,8 +4,8 @@ Template app for custom User with email being required and username is optional
 Requirements
 ============
 
-Python 2.7 ~ 3.6
-Django 1.10 ~ 1.11
+* Python 2.7 ~ 3.6
+* Django 1.10 ~ 1.11
 
 How to use
 ==========
