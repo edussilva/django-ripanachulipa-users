@@ -4,6 +4,6 @@ from django.apps import AppConfig
 from django.utils.translation import ugettext_lazy as _
 
 
-class CuserConfig(AppConfig):
-    name = 'cuser'
+class {{ camel_case_app_name }}Config(AppConfig):
+    name = '{{ app_name }}'
     verbose_name = _('users')
