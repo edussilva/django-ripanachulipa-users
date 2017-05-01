@@ -1,13 +1,15 @@
 # coding: utf-8
 
 from django.contrib.auth.backends import ModelBackend as BaseModelBackend
+from django.contrib.auth import get_user_model
 
-from .models import User
+
+User = get_user_model()
 
 
 class ModelBackend(BaseModelBackend):
     '''
-        Custom bacend for login with username
+        Custom backend for login with username
     '''
     def authenticate(self, username=None, password=None):
 
