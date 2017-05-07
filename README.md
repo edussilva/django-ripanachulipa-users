@@ -27,14 +27,9 @@ Then register 'your_app_name' in the 'INSTALLED_APPS' section, the AUTH_USER_MOD
 ```python
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    ...
 
-    'your_app_name.apps.YourAppNameConfig',
+    'your_app_name',
 ]
 
 

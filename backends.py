@@ -1,6 +1,8 @@
 # coding: utf-8
 
-from django.contrib.auth.backends import ModelBackend as BaseModelBackend
+from django.contrib.auth.backends import (
+    ModelBackend as BaseModelBackend
+)
 from django.contrib.auth import get_user_model
 
 
@@ -16,7 +18,8 @@ class ModelBackend(BaseModelBackend):
         if not username is None:
             try:
                 user = User.objects.get(username=username)
-                if user.check_password(password):
-                    return user
             except User.DoesNotExist:
                 pass
+            else:
+                if user.check_password(password):
+                    return user
